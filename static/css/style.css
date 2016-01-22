@@ -8,6 +8,14 @@ body {
   display: block;
 }
 
+pre {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    margin-left:1em;
+    margin-right: 1em;
+    padding: 1em;
+    background-color: #eee;
+}
 #menu li {
     display: inline;
 }
@@ -17,7 +25,4 @@ body {
     margin-top: 1em;
 }
 
-pre {
-    margin: 2em 1em 2em 4em;
-}
 
