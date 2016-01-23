@@ -21,6 +21,11 @@ nav li a {
     text-transform: uppercase;
 }
 
+#banner a {
+    text-decoration: none;
+}
+
+
 body {
   background-color: white;
   margin-top: 5%;
