@@ -20,6 +20,13 @@
         <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/skeleton/css/normalize.css">
         <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/skeleton/css/skeleton.css">
         <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/style.css">
+        {% if article %}
+            {% if article.stylesheets %}
+                {% for stylesheet in article.stylesheets %}
+        {{ stylesheet }}
+                {% endfor %}
+            {% endif %}
+        {% endif %}
 
         {% if FEED_ALL_ATOM %}
         <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
@@ -49,6 +56,18 @@
 </head>
 
 <body id="index" class="home">
+
+<!-- Javascript
+ ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
+{% if article %}
+    {% if article.javascripts %}
+        {% for javascript in article.javascripts %}
+{{ javascript }}
+        {% endfor %}
+    {% endif %}
+{% endif %}
+
+
 <div class="container">
 
         <!-- Header
